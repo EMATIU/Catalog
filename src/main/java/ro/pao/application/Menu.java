@@ -1,8 +1,5 @@
 package ro.pao.application;
 
-import ro.pao.service.ExampleService;
-import ro.pao.service.impl.ExampleServiceImpl;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;

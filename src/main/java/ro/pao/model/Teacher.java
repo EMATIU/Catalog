@@ -14,7 +14,7 @@ import java.util.UUID;
 @EqualsAndHashCode
 
 public class Teacher extends Person {
-    private UUID tacherId;
+    private UUID teacherId;
     private Integer salary;
     private String teacherEmail;
     private String teacherPhoneNumber;
