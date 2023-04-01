@@ -1,6 +1,5 @@
 package ro.pao.application;
 
-import ro.pao.model.ExampleClass;
 import ro.pao.service.ExampleService;
 import ro.pao.service.impl.ExampleServiceImpl;
 
