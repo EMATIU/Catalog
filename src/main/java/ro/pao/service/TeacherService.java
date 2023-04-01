@@ -7,6 +7,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface TeacherService {
+
+  Optional<Teacher> getById(UUID id);
   void showTeacher(Teacher teacher);
   void addTeacher(Teacher teacher);
   void removeTeacher(UUID id);

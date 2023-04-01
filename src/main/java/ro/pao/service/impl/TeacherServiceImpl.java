@@ -7,6 +7,7 @@ import ro.pao.service.TeacherService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -17,6 +18,14 @@ import java.util.stream.Collectors;
 public class TeacherServiceImpl implements TeacherService {
 
     private static List<Teacher> teacherList = new ArrayList<>();
+
+    @Override
+    public Optional<Teacher> getById(UUID id) {
+        return teacherList.stream()
+                .filter(object -> id.equals(object.getTeacherId()))
+                .findFirst();
+    }
+
     @Override
     public void showTeacher(Teacher teacher){
         System.out.println("First name: " + teacher.getFirstName());

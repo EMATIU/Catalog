@@ -4,12 +4,11 @@ import ro.pao.model.Grade;
 import ro.pao.model.Student;
 import ro.pao.model.Subject;
 import ro.pao.model.Teacher;
+import ro.pao.model.enums.SubjectName;
 import ro.pao.service.StudentService;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StudentServiceImpl implements StudentService {
@@ -75,5 +74,26 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAllFromList() {
         return studentList;
     }
+
+    @Override
+    public Map<SubjectName, Double> calculateGpa() {
+        /* folosesc un obiect de tip HashMap pentru a reține media fiecarei materii. Cheia este un obiect de tip SubjectName,
+         iar valoarea este media pentru acea materie
+         */
+        List<Subject> results = new ArrayList<>();
+        Map<SubjectName, Double> subjectAvereges  =new HashMap<>();
+        for(Subject subject : results){
+            if(subject.getGrades().size() > 0){
+                Double sum = 0.0;
+                for(Grade grade : subject.getGrades()){
+                    sum += grade.getGrade();
+                }
+                Double average = sum / subject.getGrades().size();
+                subjectAvereges.put(subject.getSubjectName(),average);
+            }
+        }
+        return subjectAvereges;
+    }
+
 
 }
