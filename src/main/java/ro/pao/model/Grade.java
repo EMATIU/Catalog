@@ -15,6 +15,6 @@ import java.util.Date;
 @EqualsAndHashCode
 
 public class Grade {
-    private Integer grade;
-    private LocalDate date;
+    protected Integer grade;
+    protected LocalDate date;
 }

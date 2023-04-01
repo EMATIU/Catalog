@@ -23,4 +23,10 @@ public class Subject {
     private Double gpa; //media la o anumita materie
     private ArrayList<Grade> grades;
 
+    public Grade getGradeFormat(Integer x, LocalDate y) {
+        Grade newGrade = new Grade();
+        newGrade.grade = x;
+        newGrade.date = y;
+        return newGrade;
+    }
 }

@@ -13,7 +13,6 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class StudentServiceImpl implements StudentService {
-
     private static List<Student> studentList = new ArrayList<>();
     @Override
     public void showStudent(Student student) {
