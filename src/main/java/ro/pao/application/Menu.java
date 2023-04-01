@@ -10,6 +10,7 @@ import java.util.UUID;
  *
  * In cazul in care aveam definit mai multe servicii, la fel, faceam o initializare a serviciile si astfel apelam metode din serviciu.
  */
+/*
 public class Menu {
 
     private static Menu INSTANCE;
@@ -68,3 +69,4 @@ public class Menu {
                 .forEach(elementFromList -> System.out.println(elementFromList));
     }
 }
+ */

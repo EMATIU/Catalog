@@ -1,3 +1,4 @@
+/**
 package ro.pao.service;
 
 import org.junit.jupiter.api.Test;
@@ -7,7 +8,7 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
+
  * Metodele de test ale serviciului 'ExampleService'
  *
  * In functie de cate metode serviciu aveti, puteti face mai multe clase de test pe baza a ce clase serviciu aveti.
@@ -15,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Motivul pentru care exista teste este pentru a vedea daca functionalitatea 'pe bucati' functioneaza cum trebuie.
  *
  * Aceste teste se cheama 'unitare' pentru ca se testeaza 'per unitate'
- */
+
 class ExampleServiceTest {
 
     private final Menu menu = Menu.getInstance();
@@ -29,7 +30,8 @@ class ExampleServiceTest {
      *
      * 'when{Descriere}_then{Descriere}
      */
-    @Test
+
+  /*  @Test
     void whenGivenExampleClass_thenElementIsAdd() {
         // given
         // pasul in care efectuam operatiile
@@ -54,3 +56,4 @@ class ExampleServiceTest {
         // assertFalse(false);
     }
 }
+        */

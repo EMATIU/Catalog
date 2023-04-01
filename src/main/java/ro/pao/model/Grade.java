@@ -3,6 +3,7 @@ package ro.pao.model;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -15,5 +16,5 @@ import java.util.Date;
 
 public class Grade {
     private Integer grade;
-    private Date date;
+    private LocalDate date;
 }

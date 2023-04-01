@@ -4,8 +4,8 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.pao.model.enums.SubjectName;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.TreeSet;
 
 @Getter
@@ -19,7 +19,7 @@ import java.util.TreeSet;
 public class Subject {
     private SubjectName subjectName;
     private Teacher teacher;
-    private TreeSet<Date> absences;
+    private TreeSet<LocalDate> absences;
     private Double gpa; //media la o anumita materie
     private ArrayList<Grade> grades;
 
