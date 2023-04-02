@@ -3,16 +3,30 @@ package ro.pao.service.impl;
 import ro.pao.model.Grade;
 import ro.pao.model.Student;
 import ro.pao.model.Subject;
-import ro.pao.model.Teacher;
 import ro.pao.model.enums.SubjectName;
 import ro.pao.service.StudentService;
 
-import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class StudentServiceImpl implements StudentService {
     private static List<Student> studentList = new ArrayList<>();
+    @Override
+    public Optional<Student> getById(UUID id) {
+        return studentList.stream()
+                .filter(object -> id.equals(object.getStudentId()))
+                .findFirst();
+    }
+
+    @Override
+    public Optional<Student> getByName(String firstName, String lastName) {
+        return studentList.stream()
+                .filter(element -> firstName.equals(element.getFirstName()) &&  lastName.equals(element.getLastName()))
+                .findAny();
+    }
+
+
+
     @Override
     public void showStudent(Student student) {
         System.out.println("First name: " + student.getFirstName());
@@ -31,7 +45,8 @@ public class StudentServiceImpl implements StudentService {
 
             System.out.println("==== " + subject.getSubjectName() + " ====");
             System.out.println("Grades:");
-
+            if(subject.getGrades() == null) System.out.println("Student does not have any grade at this subject");
+            else
             for(Grade grade : subject.getGrades() ){
                 System.out.println(grade.getGrade());
             }
@@ -44,11 +59,10 @@ public class StudentServiceImpl implements StudentService {
         for(Subject subject : student.getResults()){
 
             System.out.println("==== " + subject.getSubjectName() + " ====");
-            System.out.println("Number of absences: " + subject.getAbsences().size());
-
-            for(Grade grade : subject.getGrades() ){
-                System.out.println(grade.getGrade());
-            }
+            if(subject.getAbsences() == null)
+                System.out.println("Number of absences: 0");
+            else
+                System.out.println("Number of absences: " + subject.getAbsences().size());
         }
     }
 

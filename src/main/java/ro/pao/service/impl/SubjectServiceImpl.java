@@ -1,6 +1,5 @@
 package ro.pao.service.impl;
 
-import ro.pao.model.Student;
 import ro.pao.model.Subject;
 import ro.pao.model.Teacher;
 import ro.pao.model.enums.SubjectName;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-public class SubjectServiceImplementation implements SubjectService {
+public class SubjectServiceImpl implements SubjectService {
     private static List<Subject> subjectList = new ArrayList<>();
     @Override
     public void showSubjects(){

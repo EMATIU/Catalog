@@ -2,11 +2,12 @@ package ro.pao;
 
 import ro.pao.application.Menu;
 
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
