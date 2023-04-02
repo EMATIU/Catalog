@@ -81,6 +81,7 @@ public class Menu {
 
 
         ArrayList<Subject> subjects0 = new ArrayList<>();
+        Vector<Subject> subjectVector = new Vector<>();
         ArrayList<Student> students0= new ArrayList<>();
         ArrayList<Grade> grades0 = null;
         TreeSet<LocalDate> absences0 = null;
@@ -102,6 +103,9 @@ public class Menu {
 
         subjects0.add(subject01);
         subjects0.add(subject02);
+
+        subjectVector.add(subject01);
+        subjectVector.add(subject02);
 
 
         Student studentExample1 = Student.builder()
@@ -340,6 +344,15 @@ public class Menu {
                     System.out.println();
                 }
                 */
+
+            case 10:
+                System.out.println("The subject of this year of study are:");
+                subjectService.showSubjects();
+
+            case 11:
+                System.out.println("The teacher of each subject:");
+                subjectService.showTeacherForEachSubject(subjectVector);
+
 
 
         }
