@@ -11,14 +11,14 @@ This project is an innovative application that simulates an online student class
 6) Display the teacher of each subject
 
 ### Classes
---Person (sealed class)
---Parent (non-sealed class, extends Person)
---Teacher (non-sealed class, extends Person)
---Student (non-sealed class, extends Person)
---Grade
---Subject
---Semester (enum)
---SubjectName (enum)
+-Person (sealed class)
+-Parent (non-sealed class, extends Person)
+-Teacher (non-sealed class, extends Person)
+-Student (non-sealed class, extends Person)
+-Grade
+-Subject
+-Semester (enum)
+-SubjectName (enum)
 
 ### Service classes
 1) StudentService(interface) -> StudentServiceImpl (implementation of its interface)
