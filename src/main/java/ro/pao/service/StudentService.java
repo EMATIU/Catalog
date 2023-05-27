@@ -1,6 +1,6 @@
 package ro.pao.service;
 
-import ro.pao.model.Student;
+import ro.pao.model.abstracts.Student;
 import ro.pao.model.enums.SubjectName;
 
 import java.util.List;

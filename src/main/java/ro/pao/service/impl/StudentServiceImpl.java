@@ -1,7 +1,7 @@
 package ro.pao.service.impl;
 
 import ro.pao.model.Grade;
-import ro.pao.model.Student;
+import ro.pao.model.abstracts.Student;
 import ro.pao.model.Subject;
 import ro.pao.model.enums.SubjectName;
 import ro.pao.service.StudentService;

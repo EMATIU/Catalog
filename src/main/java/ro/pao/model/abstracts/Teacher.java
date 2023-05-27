@@ -1,4 +1,4 @@
-package ro.pao.model;
+package ro.pao.model.abstracts;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -13,7 +13,7 @@ import java.util.UUID;
 @ToString
 @EqualsAndHashCode
 
-public class Teacher extends Person {
+public non-sealed class Teacher extends Person {
     private UUID teacherId;
     private Integer salary;
     private String teacherEmail;

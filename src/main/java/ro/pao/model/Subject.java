@@ -2,6 +2,7 @@ package ro.pao.model;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import ro.pao.model.abstracts.Teacher;
 import ro.pao.model.enums.SubjectName;
 
 import java.time.LocalDate;

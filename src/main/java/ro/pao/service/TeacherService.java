@@ -1,6 +1,6 @@
 package ro.pao.service;
 
-import ro.pao.model.Teacher;
+import ro.pao.model.abstracts.Teacher;
 
 import java.util.List;
 import java.util.Optional;

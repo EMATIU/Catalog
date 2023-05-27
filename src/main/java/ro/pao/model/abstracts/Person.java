@@ -3,9 +3,6 @@ package ro.pao.model.abstracts;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import java.time.LocalDate;
-import java.util.UUID;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,7 +11,7 @@ import java.util.UUID;
 @ToString
 @EqualsAndHashCode
 
-public abstract class Person {
+public sealed class Person permits Parent, Student, Teacher {
 
     protected String firstName;
     protected String lastName;

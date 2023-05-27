@@ -2,7 +2,7 @@ package ro.pao.service.impl;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import ro.pao.model.Teacher;
+import ro.pao.model.abstracts.Teacher;
 import ro.pao.service.TeacherService;
 
 import java.util.ArrayList;

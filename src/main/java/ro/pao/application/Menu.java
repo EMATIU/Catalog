@@ -1,6 +1,9 @@
 package ro.pao.application;
 
 import ro.pao.model.*;
+import ro.pao.model.abstracts.Parent;
+import ro.pao.model.abstracts.Student;
+import ro.pao.model.abstracts.Teacher;
 import ro.pao.model.enums.Semester;
 import ro.pao.model.enums.SubjectName;
 import ro.pao.service.StudentService;
@@ -10,7 +13,6 @@ import ro.pao.service.impl.StudentServiceImpl;
 import ro.pao.service.impl.SubjectServiceImpl;
 import ro.pao.service.impl.TeacherServiceImpl;
 
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -46,7 +48,7 @@ public class Menu {
         10. Display all the subjects
         11. Display the teacher of each subject
         12. Sort the students by their ggpa
-        13. Exit  """;
+       """;
 
         System.out.println(intro);
         Integer option = Integer.valueOf(console.next());
@@ -353,6 +355,13 @@ public class Menu {
                 System.out.println("The teacher of each subject:");
                 subjectService.showTeacherForEachSubject(subjectVector);
 
+           /* case 12:
+                System.out.println("Students sorted by their ggpa");
+
+                List<Student> sortedStudents = students0.stream()
+                        .sorted(Comparator.comparingDouble(Student::getGgpa))
+                        .collect(Collectors.toList());
+            */
 
 
         }

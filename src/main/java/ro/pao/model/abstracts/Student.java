@@ -1,7 +1,9 @@
-package ro.pao.model;
+package ro.pao.model.abstracts;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import ro.pao.model.Subject;
+import ro.pao.model.abstracts.Parent;
 import ro.pao.model.abstracts.Person;
 import ro.pao.model.enums.Semester;
 
@@ -18,7 +20,7 @@ import java.util.function.Predicate;
 @ToString
 @EqualsAndHashCode
 
-public class Student extends Person {
+public non-sealed class Student extends Person {
     private UUID studentId;
     private String studentEmail;
     private String studentPhoneNumber;

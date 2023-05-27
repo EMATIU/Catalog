@@ -1,4 +1,4 @@
-package ro.pao.model;
+package ro.pao.model.abstracts;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -14,7 +14,7 @@ import java.util.UUID;
 @ToString
 @EqualsAndHashCode
 
-public class Parent extends Person {
+public non-sealed class Parent extends Person {
     private UUID parentId;
     private String parentPhoneNumber;
 
