@@ -2,7 +2,7 @@
 ### Description
 This project is an innovative application that simulates an online student class catalog, providing a modern digital platform for managing and monitoring students' academic progress. With the help of Catalog, teachers, students and parents can collaborate efficiently and access relevant information about academic performance in a simple and accessible manner.
 
-#### Functionalities 
+### Functionalities 
 1) Add a new teacher
 2) Delete a teacher
 3) Add a student
@@ -10,7 +10,7 @@ This project is an innovative application that simulates an online student class
 5) Display all the subjects
 6) Display the teacher of each subject
 
-##### Classes
+### Classes
 --Person (sealed class)
 --Parent (non-sealed class, extends Person)
 --Teacher (non-sealed class, extends Person)
@@ -20,7 +20,7 @@ This project is an innovative application that simulates an online student class
 --Semester (enum)
 --SubjectName (enum)
 
-##### Service classes
+### Service classes
 1) StudentService(interface) -> StudentServiceImpl (implementation of its interface)
 2) TeacherService(interface) -> TeacherServiceImpl (implementation of its interface)
 3) SubjectService(interface) -> SubjectServiceImpl (implementation of its interface)
