@@ -20,8 +20,6 @@ This project is an innovative application that simulates an online student class
 - Semester (enum)
 - SubjectName (enum)
 
-### STATUS:
-- - in progess...
 ### Service classes
 1) StudentService(interface) -> StudentServiceImpl (implementation of its interface)
 2) TeacherService(interface) -> TeacherServiceImpl (implementation of its interface)
@@ -36,3 +34,5 @@ This project is an innovative application that simulates an online student class
 - transforming the abstract class Person into a sealed class and its subclasses (Parent, Teacher, Student) into non-sealed ones
 - creating some exceptions
 
+### STATUS:
+  - in progess...
