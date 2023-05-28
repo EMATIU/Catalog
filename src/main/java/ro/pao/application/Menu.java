@@ -1,5 +1,6 @@
 package ro.pao.application;
 
+import ro.pao.exception.NotUUID;
 import ro.pao.model.*;
 import ro.pao.model.abstracts.Parent;
 import ro.pao.model.abstracts.Student;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Menu {
 
@@ -25,7 +27,7 @@ public class Menu {
     private final StudentService studentService = new StudentServiceImpl();
     private final TeacherService teacherService = new TeacherServiceImpl();
     private final SubjectService subjectService = new SubjectServiceImpl();
-
+    private final static Pattern UUID_PATTERN = Pattern.compile("^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$");
 
     public static Menu getInstance() {
         return (INSTANCE == null ? new Menu() : INSTANCE);
@@ -183,8 +185,17 @@ public class Menu {
                 System.out.println("Please enter the ID for the teacher you want to remove: ");
                 System.out.println();
 
-                UUID teacherId = UUID.fromString(console.next());
+                UUID teacherId;
                 //3bf5d7bb-9c94-4477-89f6-24c7ee30f6c2 ca sa rulez
+                String teacherIdd = console.next();
+                if(!UUID_PATTERN.matcher(teacherIdd).matches()) {
+                    try {
+                        throw new NotUUID("Invalid ID");
+                    } catch (NotUUID exception) {
+                        throw new RuntimeException(exception);
+                    }
+                }
+                else teacherId = UUID.fromString(teacherIdd);
                 if(teacherService.getById(teacherId).isPresent()){
                     teacherService.removeTeacher(teacherId);
                     System.out.println("You have successfully deleted the teacher!");
@@ -342,9 +353,10 @@ public class Menu {
                     System.out.println();
                 }
                 else{
-                    System.out.println("The student with this name doesn't exist!");
-                    System.out.println();
-                }
+                    try {
+                        throw new WhosThisStudent(nume, prenume);
+                    } catch (WhosThisStudent exception) {
+                        System.out.println(exception.getMessage());}
                 */
 
             case 10:
