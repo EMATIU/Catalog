@@ -32,4 +32,5 @@ This project is an innovative application that simulates an online student class
 
 ### Second part
 - transforming the abstract class Person into a sealed class and its subclasses (Parent, Teacher, Student) into non-sealed ones
+- creating some exceptions
 
